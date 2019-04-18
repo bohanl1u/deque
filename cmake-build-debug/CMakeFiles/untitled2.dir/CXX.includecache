@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/deque.h
+cstddef
+-
+vector
+-
+iostream
+-
+memory
+-
+stdexcept
+-
+
+/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/main.cpp
+deque.h
+/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/deque.h
+stdio.h
+-
+
