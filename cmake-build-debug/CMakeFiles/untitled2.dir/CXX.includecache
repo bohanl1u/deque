@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/deque.h
+/cygdrive/c/Users/Jimmy/Documents/CLion/deque/deque.h
 cstddef
 -
 vector
@@ -18,9 +18,15 @@ memory
 stdexcept
 -
 
-/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/main.cpp
+/cygdrive/c/Users/Jimmy/Documents/CLion/deque/plane_boarding.cc
 deque.h
-/cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/deque.h
-stdio.h
+/cygdrive/c/Users/Jimmy/Documents/CLion/deque/deque.h
+iostream
+-
+fstream
+-
+vector
+-
+sstream
 -
 

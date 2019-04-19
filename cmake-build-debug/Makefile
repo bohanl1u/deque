@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/Jimmy/.CLion2018.3/system/cygwin_cmake/bin/cmake.exe -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/Jimmy/Documents/CLion/untitled2
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/Jimmy/Documents/CLion/deque
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/Jimmy/Documents/CLion/deque/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Jimmy/Documents/CLion/deque/cmake-build-debug/CMakeFiles /cygdrive/c/Users/Jimmy/Documents/CLion/deque/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Jimmy/Documents/CLion/untitled2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Jimmy/Documents/CLion/deque/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ untitled2/fast:
 	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/build
 .PHONY : untitled2/fast
 
-main.o: main.cpp.o
+plane_boarding.o: plane_boarding.cc.o
 
-.PHONY : main.o
+.PHONY : plane_boarding.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/main.cpp.o
-.PHONY : main.cpp.o
+plane_boarding.cc.o:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/plane_boarding.cc.o
+.PHONY : plane_boarding.cc.o
 
-main.i: main.cpp.i
+plane_boarding.i: plane_boarding.cc.i
 
-.PHONY : main.i
+.PHONY : plane_boarding.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/main.cpp.i
-.PHONY : main.cpp.i
+plane_boarding.cc.i:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/plane_boarding.cc.i
+.PHONY : plane_boarding.cc.i
 
-main.s: main.cpp.s
+plane_boarding.s: plane_boarding.cc.s
 
-.PHONY : main.s
+.PHONY : plane_boarding.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/main.cpp.s
-.PHONY : main.cpp.s
+plane_boarding.cc.s:
+	$(MAKE) -f CMakeFiles/untitled2.dir/build.make CMakeFiles/untitled2.dir/plane_boarding.cc.s
+.PHONY : plane_boarding.cc.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... untitled2"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... plane_boarding.o"
+	@echo "... plane_boarding.i"
+	@echo "... plane_boarding.s"
 .PHONY : help
 
 

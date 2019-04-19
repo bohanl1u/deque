@@ -90,10 +90,8 @@ private:
     void resize(int newCap);
 };
 
-//
-// Your implementation of the class should be located below
-//
-
+//constructor that initializes the smart pointer to array
+//as well as initializes the indexes of head and tail
 template<typename T>
 Deque<T>::Deque() : arr(std::unique_ptr<T[]>(new T[cap])) {
     head = -1;
@@ -101,6 +99,7 @@ Deque<T>::Deque() : arr(std::unique_ptr<T[]>(new T[cap])) {
 
 }
 
+//function to return true if empty, otherwise return false
 template<typename T>
 bool Deque<T>::Empty() const noexcept {
     if (curSize==0){
@@ -111,11 +110,14 @@ bool Deque<T>::Empty() const noexcept {
     }
 }
 
+//function to return the current size of the deque
 template<typename T>
 size_t Deque<T>::Size() const noexcept {
     return curSize;
 }
 
+//private function to resize the array
+//according to the integer parameter
 template<typename T>
 void Deque<T>::resize(int newCap) {
     std::unique_ptr<T[]> newArr(new T[newCap]);
@@ -144,6 +146,7 @@ void Deque<T>::resize(int newCap) {
 
 }
 
+//function to shrink the array when there is extra space
 template<typename T>
 void Deque<T>::ShrinkToFit() {
     if (curSize<cap){
@@ -151,14 +154,17 @@ void Deque<T>::ShrinkToFit() {
     }
 }
 
+//overloading the at[] operator to allow easy user access
 template<typename T>
 T &Deque<T>::operator[](size_t pos) {
-    if (pos >= curSize){
+    if (pos >= unsigned(curSize)){
         throw std::out_of_range("Position out of range");
     }
     return arr[(unsigned(head) + (pos)) % cap];
 }
 
+//Function to clear the deque by creating and swapping
+// a new smart pointer to an array
 template<typename T>
 void Deque<T>::Clear(void) noexcept {
     std::unique_ptr<T[]> newArr(new T[1]);
@@ -168,6 +174,7 @@ void Deque<T>::Clear(void) noexcept {
     curSize = 0;
 }
 
+//Returns the first element of the deque
 template<typename T>
 T &Deque<T>::Front() {
     if (Empty()){
@@ -176,6 +183,7 @@ T &Deque<T>::Front() {
     return arr[head];
 }
 
+//returns the last element of the deque
 template<typename T>
 T &Deque<T>::Back() {
     if (Empty()){
@@ -184,6 +192,7 @@ T &Deque<T>::Back() {
     return arr[tail];
 }
 
+//adds an element to the front of the deque
 template<typename T>
 void Deque<T>::PushFront(const T &value){
     if (curSize==cap-1){
@@ -203,9 +212,10 @@ void Deque<T>::PushFront(const T &value){
     curSize++;
 }
 
+//adds an element to the back of the deque
 template<typename T>
 void Deque<T>::PushBack(const T &value) {
-    if (curSize==cap){
+    if (curSize==cap-1){
         resize(2*curSize);
     }
     if (head == -1){
@@ -222,6 +232,7 @@ void Deque<T>::PushBack(const T &value) {
     curSize++;
 }
 
+//removes the element at front of the deque
 template<typename T>
 void Deque<T>::PopFront() {
     if (Empty()){
@@ -243,6 +254,7 @@ void Deque<T>::PopFront() {
 
 }
 
+//removes the element at back of the deque
 template<typename T>
 void Deque<T>::PopBack() {
     if (Empty()){

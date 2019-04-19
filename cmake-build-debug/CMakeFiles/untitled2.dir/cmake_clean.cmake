@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled2.dir/main.cpp.o"
+  "CMakeFiles/untitled2.dir/plane_boarding.cc.o"
   "untitled2.pdb"
   "untitled2.exe"
   "libuntitled2.dll.a"

@@ -12,34 +12,11 @@ void printArr(Deque<int>& dq){
 }
 int main(){
     Deque<int> dq;
-    dq.PushFront(20);
-    printf("After pushfront(20)");
-    printArr(dq);
-    dq.PushBack(23);
-    printf("After pushback(23)");
-    printArr(dq);
-    dq.PushFront(10);
-    printf("After pushfront(10)");
-    printArr(dq);
-    dq.PushFront(30);
-    printf("After pushfront(30)");
-    printArr(dq);
-    dq.PushFront(50);
-    printf("After pushfront(50)");
-    printArr(dq);
-    dq.PushFront(50);
-    printf("After pushfront(50)");
-    printArr(dq);
-    dq.PushFront(50);
-    printf("After pushfront(50)");
-    printArr(dq);
-    dq.PopFront();
-    printf("After popFront ");
-    printArr(dq);
-    dq.PopBack();
-    printf("After popBack ");
-    printArr(dq);
-    dq.PopFront();
-    printf("After popFront ");
+    dq.PushBack(5);
+    dq.PushFront(4);
+    dq.PushBack(6);
+    dq.PushFront(3);
+    dq.PushFront(2);
+    dq.PushBack(7);
     printArr(dq);
 }
